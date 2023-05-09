@@ -6,14 +6,15 @@
   "homepage": "https://roy-mootsana.github.io/portfolio-v1/",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d dist",
+"deploy": "gh-pages -d build",
+
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/October-review/portfolio.git"
+    "url": "git+https://github.com/roy-mootsana/portfolio-v1.git"
   },
   "author": "Roy",
   "license": "MIT",
