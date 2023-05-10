@@ -1,68 +1,64 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import homeImg from '../../../../Assets/Images/WhatsMyFood/Home.png';
-import restaurantImg from '../../../../Assets/Images/WhatsMyFood/Restaurant.png';
-import addRestaurantImg from '../../../../Assets/Images/WhatsMyFood/AddRestaurant.png';
-import addFoodImg from '../../../../Assets/Images/WhatsMyFood/AddFood.png';
+import homeImg from '../../../../Assets/Images/ppapps/Group 19.png';
+import restaurantImg from '../../../../Assets/Images/ppapps/Group 22.png';
+import addRestaurantImg from '../../../../Assets/Images/ppapps/Group 30.png';
+import addFoodImg from '../../../../Assets/Images/ppapps/Group 31.png';
 
 const Restaurant = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 15}%) scale(0.7)`,
+    transform: `translate(0px,-${(scroll) * 15}%)`,
   }),
 })`
 transition: transform 0.2s ease-out;
 position: absolute;
-bottom: -170vh;
-transform-origin: left center;
-left:2vw;
+bottom: -90vh;
+left:0vw;
 /* border: 1px dashed red; */
 height: 80vh; 
 `;
 
 const Home = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 8.5}%) scale(0.62)`,
+    transform: `translate(0px,-${(scroll) * 8}%) scale(0.9)`,
   }),
 })`
 transition: transform 0.2s ease-out;
 position: absolute;
-bottom:-125vh;
+bottom:-45vh;
 right: 2vw;
-transform-origin: right center;
 /* border: 1px dashed red; */
 height: 80vh;
-filter: blur(0.6px);
+filter: blur(0.2px);
 `;
 
 const AddFood = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 3.5}%) scale(0.5)`,
+    transform: `translate(0px,-${(scroll) * 5}%) scale(0.7)`,
   }),
 })`
 transition: transform 0.2s ease-out;
-bottom:-110vh;
-left:10vw;
-transform-origin: left center;
+bottom:-60vh;
+left:2vw;
 position: absolute;
 /* border: 1px dashed red; */
 height: 80vh;
-filter: blur(0.8px);
+filter: blur(0.4px);
 `;
 
 const AddRestaurant = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 2}%) scale(0.45)`,
+    transform: `translate(0px,-${(scroll) * 2}%) scale(0.6)`,
   }),
 })`
 transition: transform 0.2s ease-out;
-bottom:-105vh;
-right: 10vw;
-transform-origin: right center;
+bottom:-45vh;
+right: 4vw;
 position: absolute;
 /* border: 1px dashed red; */
-height: 80vh;
-filter: blur(1.2px);
+height: 60vh;
+filter: blur(0.2px);
 `;
 
 class WhatsMyFoodImages extends Component {
@@ -76,9 +72,6 @@ class WhatsMyFoodImages extends Component {
     const scrollOffsetInPercent = (scrollOffset * 100 / scrollHeight) + index - 1;
     // console.log('WMF scrollOffsetPercent ', scrollOffsetInPercent);
     scrollPercent -= scrollOffsetInPercent;
-    if (scrollPercent > 0 && scrollPercent < 0.1) {
-      console.log('WMF');
-    }
     return (
       <React.Fragment>
         <AddFood src={addFoodImg} scroll={scrollPercent} alt="addFood" />

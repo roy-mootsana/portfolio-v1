@@ -1,66 +1,64 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import dots from '../../../../Assets/Images/Showcase/Dots.png';
-import bubbles from '../../../../Assets/Images/Showcase/Bubble.png';
-import paths from '../../../../Assets/Images/Showcase/Paths.png';
-import bigBubble from '../../../../Assets/Images/Showcase/BigBubble.png';
+import dots from '../../../../Assets/Images/Showcase/Dots2.png';
+import bubbles from '../../../../Assets/Images/Showcase/testing2.jpg';
+import paths from '../../../../Assets/Images/Showcase/t2 (3).jpg';
+import bigBubble from '../../../../Assets/Images/Showcase/t2 (1).jpg';
 
 
 const Dots = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 36}%) scale(0.99)`,
+    transform: `translate(0px,-${(scroll) * 30}%)`,
   }),
 })`
 transition: transform 0.2s ease-out;
 position: absolute;
-bottom: -250vh;
-left:2vw;
-transform-origin: left center;
+bottom: -240vh;
+left:0vw;
 /* border: 1px dashed red; */
-width: 80vw; 
+height: 50vh; 
 `;
 
 const Bubbles = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 25}%) scale(0.9)`,
+    transform: `translate(0px,-${(scroll) * 23}%) scale(0.9)`,
   }),
 })`
 position: absolute;
-bottom:-210vh;
-right: 2vw;
+bottom:-225vh;
+right: 0vw;
 transform-origin: right center;
 /* border: 1px dashed red; */
-width: 80vw;
-filter: blur(0.2px);
+height: 50vh;
+filter: blur(0.6px);
 `;
 
 const BigBubble = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 13}%) scale(0.8)`,
+    transform: `translate(0px,-${(scroll) * 10}%) scale(0.7)`,
   }),
 })`
-bottom:-160vh;
-left:2vw;
-transform-origin: left center;
+bottom:-125vh;
+left:-4vw;
 position: absolute;
 /* border: 1px dashed red; */
-width: 80vw;
-filter: blur(0.5px);
+height: 50vh;
+filter: blur(0.8px);
 `;
 
 const Paths = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 4}%) scale(0.7)`,
+    transform: `translate(0px,-${(scroll) * 3}%) scale(0.6)`,
   }),
 })`
-bottom:-120vh;
-right: 2vw;
+bottom:-80vh;
+right: 1vw;
 transform-origin: right center;
 position: absolute;
 /* border: 1px dashed red; */
-width: 80vw;
-filter: blur(0.8px);
+height: 50vh;
+filter: blur(1.2px);
 `;
 
 class VoistrapWebImages extends Component {
