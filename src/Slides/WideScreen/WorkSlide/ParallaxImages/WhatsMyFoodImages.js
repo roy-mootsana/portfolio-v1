@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import homeImg from '../../../../Assets/Images/WhatsMyFood/Home.png';
-import restaurantImg from '../../../../Assets/Images/WhatsMyFood/Restaurant.png';
-import addRestaurantImg from '../../../../Assets/Images/WhatsMyFood/AddRestaurant.png';
-import addFoodImg from '../../../../Assets/Images/WhatsMyFood/AddFood.png';
+import homeImg from '../../../../Assets/Images/ppapps/Group 19.png';
+import restaurantImg from '../../../../Assets/Images/ppapps/Group 22.png';
+import addRestaurantImg from '../../../../Assets/Images/ppapps/Group 30.png';
+import addFoodImg from '../../../../Assets/Images/ppapps/Group 31.png';
 
 const Restaurant = styled.img.attrs({
   style: ({ scroll }) => ({
@@ -30,7 +30,7 @@ bottom:-45vh;
 right: 2vw;
 /* border: 1px dashed red; */
 height: 80vh;
-filter: blur(0.6px);
+filter: blur(0.2px);
 `;
 
 const AddFood = styled.img.attrs({
@@ -39,12 +39,12 @@ const AddFood = styled.img.attrs({
   }),
 })`
 transition: transform 0.2s ease-out;
-bottom:-75vh;
+bottom:-60vh;
 left:2vw;
 position: absolute;
 /* border: 1px dashed red; */
 height: 80vh;
-filter: blur(0.8px);
+filter: blur(0.4px);
 `;
 
 const AddRestaurant = styled.img.attrs({
@@ -53,12 +53,12 @@ const AddRestaurant = styled.img.attrs({
   }),
 })`
 transition: transform 0.2s ease-out;
-bottom:-55vh;
-right: 5vw;
+bottom:-45vh;
+right: 4vw;
 position: absolute;
 /* border: 1px dashed red; */
-height: 80vh;
-filter: blur(1.2px);
+height: 60vh;
+filter: blur(0.2px);
 `;
 
 class WhatsMyFoodImages extends Component {

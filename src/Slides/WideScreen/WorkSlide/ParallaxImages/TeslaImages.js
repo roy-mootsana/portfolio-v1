@@ -1,68 +1,67 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import teslaTyreImg from '../../../../Assets/Images/Tesla/Tyre.png';
-import teslaHeatImg from '../../../../Assets/Images/Tesla/Heat.png';
-import teslaLockImg from '../../../../Assets/Images/Tesla/Lock.png';
-import teslaBatteryImg from '../../../../Assets/Images/Tesla/Battery.png';
+import dots from '../../../../Assets/Images/nails/Group 9.png';
+import bubbles from '../../../../Assets/Images/nails/Group 27.png';
+// import paths from '../../../../Assets/Images/nails/Group 28.png';
+import bigBubble from '../../../../Assets/Images/nails/Group 28.png';
 
 
-const Heat = styled.img.attrs({
+const Dots = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 15}%)`,
+    transform: `translate(0px,-${(scroll) * 30}%)`,
   }),
 })`
 transition: transform 0.2s ease-out;
 position: absolute;
-bottom: -90vh;
+bottom: -240vh;
 left:0vw;
 /* border: 1px dashed red; */
-height: 80vh; 
+height: 50vh; 
 `;
 
-const Tyre = styled.img.attrs({
+const Bubbles = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 8}%) scale(0.9)`,
+    transform: `translate(0px,-${(scroll) * 23}%) scale(0.9)`,
   }),
 })`
-transition: transform 0.2s ease-out;
 position: absolute;
-bottom:-45vh;
-right: 2vw;
+bottom:-225vh;
+right: 0vw;
+transform-origin: right center;
 /* border: 1px dashed red; */
-height: 80vh;
+height: 50vh;
 filter: blur(0.6px);
 `;
 
-const Battery = styled.img.attrs({
+const BigBubble = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 5}%) scale(0.7)`,
+    transform: `translate(0px,-${(scroll) * 10}%) scale(0.7)`,
   }),
 })`
-transition: transform 0.2s ease-out;
-bottom:-75vh;
-left:2vw;
+bottom:-125vh;
+left:-4vw;
 position: absolute;
 /* border: 1px dashed red; */
-height: 80vh;
+height: 50vh;
 filter: blur(0.8px);
 `;
 
-const Lock = styled.img.attrs({
-  style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 2}%) scale(0.6)`,
-  }),
-})`
-transition: transform 0.2s ease-out;
-bottom:-55vh;
-right: 5vw;
-position: absolute;
-/* border: 1px dashed red; */
-height: 80vh;
-filter: blur(1.2px);
-`;
+// const Paths = styled.img.attrs({
+//   style: ({ scroll }) => ({
+//     transform: `translate(0px,-${(scroll) * 3}%) scale(0.6)`,
+//   }),
+// })`
+// bottom:-80vh;
+// right: 1vw;
+// transform-origin: right center;
+// position: absolute;
+// /* border: 1px dashed red; */
+// height: 50vh;
+// filter: blur(1.2px);
+// `;
 
-class TeslaImages extends Component {
+class VoistrapWebImages2 extends Component {
   render() {
     let { scrollPercent } = this.props;
     const {
@@ -70,26 +69,24 @@ class TeslaImages extends Component {
     } = this.props;
     const heighttoBeReducedinVH = ((boxHeight * index) - 100);
     const scrollOffset = (screenHeight * heighttoBeReducedinVH) / 100;
-    const scrollOffsetInPercent = (scrollOffset * 100 / scrollHeight) + index - 1;
+    const scrollOffsetInPercent = (scrollOffset * 100 / scrollHeight);
     scrollPercent -= scrollOffsetInPercent;
-
     return (
       <React.Fragment>
-        <Lock src={teslaLockImg} scroll={scrollPercent} alt="teslaLock" />
-        <Battery src={teslaBatteryImg} scroll={scrollPercent} alt="teslaBattery" />
-        <Tyre src={teslaTyreImg} scroll={scrollPercent} alt="teslaTyre" />
-        <Heat src={teslaHeatImg} scroll={scrollPercent} alt="teslaHeat" />
+        {/* <Paths src={paths} scroll={scrollPercent} alt="paths" /> */}
+        <BigBubble src={bigBubble} scroll={scrollPercent} alt="bigBubble" />
+        <Bubbles src={bubbles} scroll={scrollPercent} alt="bubbles" />
+        <Dots src={dots} scroll={scrollPercent} alt="dots" />
       </React.Fragment>
     );
   }
 }
 
-TeslaImages.propTypes = {
+VoistrapWebImages2.propTypes = {
   boxHeight: PropTypes.number.isRequired,
   index: PropTypes.number.isRequired,
   screenHeight: PropTypes.number.isRequired,
   scrollHeight: PropTypes.number.isRequired,
   scrollPercent: PropTypes.number.isRequired,
 };
-
-export default TeslaImages;
+export default VoistrapWebImages2;
