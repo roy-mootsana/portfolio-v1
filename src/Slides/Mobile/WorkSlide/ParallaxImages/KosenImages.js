@@ -1,56 +1,67 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import englishHome from '../../../../Assets/Images/Kosen/EnglishHome.png';
-import jpnHome from '../../../../Assets/Images/Kosen/JpnHome.png';
-import player from '../../../../Assets/Images/Kosen/Player.png';
+import dots from '../../../../Assets/Images/Readpoint/Group 1.png';
+import bubbles from '../../../../Assets/Images/Readpoint/Group 3.png';
+// import paths from '../../../../Assets/Images/Readpoint/Group 4.png';
+import bigBubble from '../../../../Assets/Images/Readpoint/Group 32.png';
 
-const JapaneseTab = styled.img.attrs({
+
+const Dots = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 13}%) scale(0.8)`,
+    transform: `translate(0px,-${(scroll) * 30}%)`,
   }),
 })`
 transition: transform 0.2s ease-out;
 position: absolute;
-bottom:-220vh;
-left: 2vw;
-transform-origin: left center;
+bottom: -240vh;
+left:0vw;
 /* border: 1px dashed red; */
-height: 70vh;
-
+height: 50vh; 
 `;
 
-const EnglishTab = styled.img.attrs({
+const Bubbles = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 9}%) scale(0.6)`,
+    transform: `translate(0px,-${(scroll) * 23}%) scale(0.9)`,
   }),
 })`
-transition: transform 0.2s ease-out;
 position: absolute;
-bottom: -210vh;
-right: 3vw;
+bottom:-225vh;
+right: 0vw;
 transform-origin: right center;
 /* border: 1px dashed red; */
-filter: blur(0.6px);
-height: 70vh; 
+height: 50vh;
+filter: blur(0.1px);
 `;
 
-const PlayerTab = styled.img.attrs({
+const BigBubble = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 3}%) scale(0.5)`,
+    transform: `translate(0px,-${(scroll) * 10}%) scale(0.7)`,
   }),
 })`
-transition: transform 0.2s ease-out;
-bottom:-135vh;
-left: 3vw;
-transform-origin: left center;
+bottom:-125vh;
+left:-4vw;
 position: absolute;
 /* border: 1px dashed red; */
-height: 70vh;
-filter: blur(1px);
+height: 50vh;
+filter: blur(0.1px);
 `;
 
-class KosenImages extends Component {
+// const Paths = styled.img.attrs({
+//   style: ({ scroll }) => ({
+//     transform: `translate(0px,-${(scroll) * 3}%) scale(0.6)`,
+//   }),
+// })`
+// bottom:-80vh;
+// right: 1vw;
+// transform-origin: right center;
+// position: absolute;
+// /* border: 1px dashed red; */
+// height: 50vh;
+// filter: blur(0.1px);
+// `;
+
+class VoistrapWebImages3 extends Component {
   render() {
     let { scrollPercent } = this.props;
     const {
@@ -59,23 +70,19 @@ class KosenImages extends Component {
     const heighttoBeReducedinVH = ((boxHeight * index) - 100);
     const scrollOffset = (screenHeight * heighttoBeReducedinVH) / 100;
     const scrollOffsetInPercent = (scrollOffset * 100 / scrollHeight);
-    // console.log('Voistrap scrollOffsetPercent ', scrollOffsetInPercent);
-    console.log('scrollPercent ', scrollPercent);
     scrollPercent -= scrollOffsetInPercent;
-    if (scrollPercent > 0 && scrollPercent < 0.1) {
-      console.log('Voistrap');
-    }
     return (
       <React.Fragment>
-        <PlayerTab src={player} scroll={scrollPercent} alt="kosenPlayer" />
-        <EnglishTab src={englishHome} scroll={scrollPercent} alt="kosenEnglish" />
-        <JapaneseTab src={jpnHome} scroll={scrollPercent} alt="kosenJapanese" />
+        {/* <Paths src={paths} scroll={scrollPercent} alt="paths" /> */}
+        <BigBubble src={bigBubble} scroll={scrollPercent} alt="bigBubble" />
+        <Bubbles src={bubbles} scroll={scrollPercent} alt="bubbles" />
+        <Dots src={dots} scroll={scrollPercent} alt="dots" />
       </React.Fragment>
     );
   }
 }
 
-KosenImages.propTypes = {
+VoistrapWebImages3.propTypes = {
   boxHeight: PropTypes.number.isRequired,
   index: PropTypes.number.isRequired,
   screenHeight: PropTypes.number.isRequired,
@@ -83,4 +90,4 @@ KosenImages.propTypes = {
   scrollPercent: PropTypes.number.isRequired,
 };
 
-export default KosenImages;
+export default VoistrapWebImages3;

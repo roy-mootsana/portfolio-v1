@@ -1,50 +1,47 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import voistrapHomeImg from '../../../../Assets/Images/Voistrap/Home.png';
-import voistrapMeetingsImg from '../../../../Assets/Images/Voistrap/Meetings.png';
-import voistrapPeopleImg from '../../../../Assets/Images/Voistrap/People.png';
-import voistrapScoreImg from '../../../../Assets/Images/Voistrap/Score.png';
+import voistrapHomeImg from '../../../../Assets/Images/storybook/Group 14.png';
+import voistrapMeetingsImg from '../../../../Assets/Images/storybook/Group 16.png';
+import voistrapPeopleImg from '../../../../Assets/Images/storybook/Group 29.png';
+
 
 
 const VoistrapPhoneHome = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 15}%) scale(0.7)`,
+    transform: `translate(0px,-${(scroll) * 15}%)`,
   }),
 })`
 transition: transform 0.2s ease-out;
 position: absolute;
-bottom: -170vh;
-transform-origin: left center;
-left:2vw;
+bottom: -40vh;
+left:0vw;
 /* border: 1px dashed red; */
-height: 80vh; 
+height: 40vh; 
 `;
 
 const VoistrapPhoneMeetings = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 8.5}%) scale(0.62)`,
+    transform: `translate(0px,-${(scroll) * 8}%) scale(0.9)`,
   }),
 })`
 transition: transform 0.2s ease-out;
 position: absolute;
-bottom:-125vh;
+bottom:-100vh;
 right: 2vw;
-transform-origin: right center;
 /* border: 1px dashed red; */
-height: 80vh;
+height: 50vh;
 filter: blur(0.6px);
 `;
 
 const VoistrapPhoneScore = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 3.5}%) scale(0.5)`,
+    transform: `translate(0px,-${(scroll) * 5}%) scale(0.7)`,
   }),
 })`
 transition: transform 0.2s ease-out;
-bottom:-110vh;
-left:10vw;
-transform-origin: left center;
+bottom:-75vh;
+left:2vw;
 position: absolute;
 /* border: 1px dashed red; */
 height: 80vh;
@@ -53,17 +50,15 @@ filter: blur(0.8px);
 
 const VoistrapPhonePeople = styled.img.attrs({
   style: ({ scroll }) => ({
-    transform: `translate(0px,-${(scroll) * 2}%) scale(0.45)`,
+    transform: `translate(0px,-${(scroll) * 2}%) scale(0.9)`,
   }),
 })`
 transition: transform 0.2s ease-out;
-bottom:-105vh;
-right: 10vw;
-transform-origin: right center;
 position: absolute;
+bottom: -20vh;
+left:0vw;
 /* border: 1px dashed red; */
-height: 80vh;
-filter: blur(1.2px);
+height: 50vh; 
 `;
 
 class VoistrapImages extends Component {
@@ -75,12 +70,11 @@ class VoistrapImages extends Component {
     const heighttoBeReducedinVH = ((boxHeight * index) - 100);
     const scrollOffset = (screenHeight * heighttoBeReducedinVH) / 100;
     const scrollOffsetInPercent = (scrollOffset * 100 / scrollHeight);
-    console.log('scrollPercent ', scrollPercent);
     scrollPercent -= scrollOffsetInPercent;
     return (
       <React.Fragment>
         <VoistrapPhonePeople src={voistrapPeopleImg} scroll={scrollPercent} alt="voistrapPeople" />
-        <VoistrapPhoneScore src={voistrapScoreImg} scroll={scrollPercent} alt="voistrapScore" />
+
         <VoistrapPhoneMeetings src={voistrapMeetingsImg} scroll={scrollPercent} alt="voistrapMeetings" />
         <VoistrapPhoneHome src={voistrapHomeImg} scroll={scrollPercent} alt="voistrapHome" />
       </React.Fragment>

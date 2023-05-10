@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import dots from '../../../../Assets/Images/Showcase/Dots.png';
-import bubbles from '../../../../Assets/Images/Showcase/Bubble.png';
-import paths from '../../../../Assets/Images/Showcase/Paths.png';
-import bigBubble from '../../../../Assets/Images/Showcase/BigBubble.png';
+import dots from '../../../../Assets/Images/Showcase/Dots2.png';
+import bubbles from '../../../../Assets/Images/Showcase/testing2.jpg';
+import paths from '../../../../Assets/Images/Showcase/t2 (3).jpg';
+import bigBubble from '../../../../Assets/Images/Showcase/t2 (1).jpg';
 
 
 const Dots = styled.img.attrs({
