@@ -80,32 +80,34 @@ class Skills extends Component {
         <SkillsTitle>SKILLS</SkillsTitle>
         <SkillsList>
           <div>
-            React
-            <br />
-            React Native
-            <br />
-            Node.js
-            <br />
-            <br />
-            Rapid Prototyping
-            <br />
-            Functional Programming
-            <br />
-            Interaction Development
-            <br />
-            <br />
-            Responsive Design
-            <br />
-            Testing & Debugging
-            <br />
-            Application Architecture
-            <br />
-            <br />
-            Figma & Sketch
-            <br />
             Design system
             <br />
-            Abstract
+            Wireframing & Prototyping
+            <br />
+            Prince2 certified
+            <br />
+            <br />
+            Figma
+            <br />
+            Figjam
+            <br />
+            Salesforce Ranger
+            <br />
+          </div>
+<br/>
+          <div>
+            Responsive & Adaptive Design
+            <br />
+            Component Design
+            <br />
+            UI Maintenance
+            <br />
+            <br />
+            Angular
+            <br />
+            JavaScript
+            <br />
+            Node JS
             <br />
           </div>
         </SkillsList>

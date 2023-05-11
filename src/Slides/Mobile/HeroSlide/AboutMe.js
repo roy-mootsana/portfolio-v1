@@ -43,8 +43,8 @@ class AboutMe extends Component {
     return (
       <Container>
         <AboutMeDescription>
-          Front-end developer who cares deeply about user experience.
-          Serious passion for UI design and new technologies.
+        Detail-oriented User Interface designer who cares deeply about user experience.
+        Serious passion for UI design, development and new technologies.
         </AboutMeDescription>
       </Container>
     );
