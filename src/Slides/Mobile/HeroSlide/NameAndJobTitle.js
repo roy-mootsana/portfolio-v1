@@ -14,7 +14,7 @@ const Container = styled.section`
 `;
 
 const Name = styled.div`
-  font-family: 'Algerian'!important;
+  font-family: 'Bauhaus 93'!important;
   text-align:center;
   padding-right: 10px;
   @media ${device.mobileS} {
