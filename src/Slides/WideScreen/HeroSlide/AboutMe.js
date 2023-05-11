@@ -18,8 +18,8 @@ const AboutMeTitle = styled.div.attrs({
   transition: transform 0.5s ease-out;
   font-family: 'AvenirHeavy';
   position: absolute;
-  color: #cfd7ff;
-  top :35%;
+  color: #e1e6ff;
+  top :30%;
   left:-15%;
   @media ${device.laptop} {
     font-size: 180px;
