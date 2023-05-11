@@ -14,10 +14,10 @@ const Dots = styled.img.attrs({
 })`
 transition: transform 0.2s ease-out;
 position: absolute;
-bottom: -240vh;
+bottom: -210vh;
 left:0vw;
 /* border: 1px dashed red; */
-height: 50vh; 
+height: 20vh; 
 `;
 
 const Bubbles = styled.img.attrs({
@@ -26,12 +26,12 @@ const Bubbles = styled.img.attrs({
   }),
 })`
 position: absolute;
-bottom:-225vh;
+bottom:-200vh;
 right: 0vw;
 transform-origin: right center;
 /* border: 1px dashed red; */
-height: 50vh;
-filter: blur(0.6px);
+height: 20vh;
+filter: blur(0.1px);
 `;
 
 const BigBubble = styled.img.attrs({
@@ -39,12 +39,12 @@ const BigBubble = styled.img.attrs({
     transform: `translate(0px,-${(scroll) * 10}%) scale(0.7)`,
   }),
 })`
-bottom:-125vh;
+bottom:-115vh;
 left:-4vw;
 position: absolute;
 /* border: 1px dashed red; */
-height: 50vh;
-filter: blur(0.8px);
+height: 20vh;
+filter: blur(0.1px);
 `;
 
 // const Paths = styled.img.attrs({

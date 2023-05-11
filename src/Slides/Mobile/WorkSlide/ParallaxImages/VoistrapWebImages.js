@@ -17,7 +17,7 @@ position: absolute;
 bottom: -240vh;
 left:0vw;
 /* border: 1px dashed red; */
-height: 50vh; 
+height: 20vh; 
 `;
 
 const Bubbles = styled.img.attrs({
@@ -30,8 +30,8 @@ bottom:-225vh;
 right: 0vw;
 transform-origin: right center;
 /* border: 1px dashed red; */
-height: 50vh;
-filter: blur(0.6px);
+height: 20vh;
+filter: blur(0.1px);
 `;
 
 const BigBubble = styled.img.attrs({
@@ -43,8 +43,8 @@ bottom:-125vh;
 left:-4vw;
 position: absolute;
 /* border: 1px dashed red; */
-height: 50vh;
-filter: blur(0.8px);
+height: 20vh;
+filter: blur(0.1px);
 `;
 
 const Paths = styled.img.attrs({
@@ -57,8 +57,8 @@ right: 1vw;
 transform-origin: right center;
 position: absolute;
 /* border: 1px dashed red; */
-height: 50vh;
-filter: blur(1.2px);
+height: 20vh;
+filter: blur(0.1px);
 `;
 
 class VoistrapWebImages extends Component {

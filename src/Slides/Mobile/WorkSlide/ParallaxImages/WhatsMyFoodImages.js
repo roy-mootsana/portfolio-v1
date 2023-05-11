@@ -16,7 +16,7 @@ position: absolute;
 bottom: -90vh;
 left:0vw;
 /* border: 1px dashed red; */
-height: 80vh; 
+height: 30vh; 
 `;
 
 const Home = styled.img.attrs({
@@ -29,7 +29,7 @@ position: absolute;
 bottom:-45vh;
 right: 2vw;
 /* border: 1px dashed red; */
-height: 80vh;
+height: 20vh;
 filter: blur(0.2px);
 `;
 
@@ -43,8 +43,8 @@ bottom:-60vh;
 left:2vw;
 position: absolute;
 /* border: 1px dashed red; */
-height: 80vh;
-filter: blur(0.4px);
+height: 20vh;
+filter: blur(0.1px);
 `;
 
 const AddRestaurant = styled.img.attrs({
@@ -57,7 +57,7 @@ bottom:-45vh;
 right: 4vw;
 position: absolute;
 /* border: 1px dashed red; */
-height: 60vh;
+height: 30vh;
 filter: blur(0.2px);
 `;
 

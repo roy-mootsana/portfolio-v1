@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import voistrapHomeImg from '../../../../Assets/Images/storybook/Group 14.png';
 import voistrapMeetingsImg from '../../../../Assets/Images/storybook/Group 16.png';
 import voistrapPeopleImg from '../../../../Assets/Images/storybook/Group 29.png';
-
+import voistrapPhoneScoreImg from '../../../../Assets/Images/storybook/Group 34.png';
 
 
 const VoistrapPhoneHome = styled.img.attrs({
@@ -14,10 +14,10 @@ const VoistrapPhoneHome = styled.img.attrs({
 })`
 transition: transform 0.2s ease-out;
 position: absolute;
-bottom: -40vh;
+bottom: -20vh;
 left:0vw;
 /* border: 1px dashed red; */
-height: 40vh; 
+height: 20vh; 
 `;
 
 const VoistrapPhoneMeetings = styled.img.attrs({
@@ -30,8 +30,8 @@ position: absolute;
 bottom:-100vh;
 right: 2vw;
 /* border: 1px dashed red; */
-height: 50vh;
-filter: blur(0.6px);
+height:20vh;
+filter: blur(0.1px);
 `;
 
 const VoistrapPhoneScore = styled.img.attrs({
@@ -44,8 +44,8 @@ bottom:-75vh;
 left:2vw;
 position: absolute;
 /* border: 1px dashed red; */
-height: 80vh;
-filter: blur(0.8px);
+height: 20vh;
+filter: blur(0.1px);
 `;
 
 const VoistrapPhonePeople = styled.img.attrs({
@@ -58,7 +58,7 @@ position: absolute;
 bottom: -20vh;
 left:0vw;
 /* border: 1px dashed red; */
-height: 50vh; 
+height: 20vh; 
 `;
 
 class VoistrapImages extends Component {
@@ -74,7 +74,7 @@ class VoistrapImages extends Component {
     return (
       <React.Fragment>
         <VoistrapPhonePeople src={voistrapPeopleImg} scroll={scrollPercent} alt="voistrapPeople" />
-
+        <VoistrapPhoneScore src={voistrapPhoneScoreImg} scroll={scrollPercent} alt="voistrapPhone" />
         <VoistrapPhoneMeetings src={voistrapMeetingsImg} scroll={scrollPercent} alt="voistrapMeetings" />
         <VoistrapPhoneHome src={voistrapHomeImg} scroll={scrollPercent} alt="voistrapHome" />
       </React.Fragment>
