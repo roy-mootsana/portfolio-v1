@@ -14,7 +14,7 @@ const Container = styled.section`
 `;
 
 const Name = styled.div`
-  font-family: 'Algerian';
+  font-family: 'Algerian'!important;
   text-align:center;
   padding-right: 10px;
   @media ${device.mobileS} {
@@ -62,7 +62,7 @@ class NameAndJobTitle extends Component {
         <Name>Roy</Name>
         <Title><i>UI Design and Development</i></Title>
       </Container>
-      
+
     );
   }
 }
