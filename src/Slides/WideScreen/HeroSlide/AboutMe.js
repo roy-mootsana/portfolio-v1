@@ -18,8 +18,8 @@ const AboutMeTitle = styled.div.attrs({
   transition: transform 0.5s ease-out;
   font-family: 'AvenirHeavy';
   position: absolute;
-  color: #EEE;
-  top:5%;
+  color: #cfd7ff;
+  top :35%;
   left:-15%;
   @media ${device.laptop} {
     font-size: 180px;
@@ -37,6 +37,7 @@ const AboutMeDescription = styled.div`
   font-family: 'AvenirLight';
   text-align: left;
   margin-left: 30%;
+  top: 50%;
   margin-right: 5%;
   @media ${device.laptop} {
     transform: translateY(90%);
@@ -83,10 +84,12 @@ class AboutMe extends Component {
     const { scrollPercent } = this.state;
     return (
       <Container>
+
         <AboutMeTitle scrollPercent={scrollPercent}>ABOUT ME</AboutMeTitle>
+
         <AboutMeDescription>
-        Front-end developer who cares deeply about user experience.
-        Serious passion for UI design and new technologies.
+        Detail-oriented User Interface designer who cares deeply about user experience.
+        Serious passion for UI design, development and new technologies.
         </AboutMeDescription>
       </Container>
     );

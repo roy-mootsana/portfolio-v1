@@ -18,10 +18,10 @@ class NameAndJobTitle extends Component {
   render() {
     return (
       <Container>
-        <NameReveal text="Roy Mootsana" fontFam="Valencia" timeDelay={500} />
+        <NameReveal text="Roy" fontFam="Algerian" timeDelay={500} />
         <br />
-        <TitleReveal text="UI Engineer" fontFam="AvenirRoman" timeDelay={1300} />
-    
+        <TitleReveal text="UI Design and Development " fontFam="Bahnschrift SemiBold" timeDelay={1300} />
+        <TitleReveal text="⬇" fontFam="AvenirRoman" timeDelay={1300} />
    
       </Container>
     );

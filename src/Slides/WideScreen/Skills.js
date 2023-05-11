@@ -99,27 +99,27 @@ class Skills extends Component {
             <br />
             Wireframing & Prototyping
             <br />
-            Visual Communication
+            Prince2 certified
             <br />
             <br />
             Figma
             <br />
-            Sketch
+            Figjam
             <br />
-            P5 JS
+            Salesforce Ranger
             <br />
           </div>
           <div>
             Responsive & Adaptive Design
             <br />
-            Styling Architecture
+            Component Design
             <br />
             UI Maintenance
             <br />
             <br />
-            React
+            Angular
             <br />
-            React Native
+            JavaScript
             <br />
             Node JS
             <br />

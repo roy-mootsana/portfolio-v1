@@ -26,7 +26,7 @@ const ContactTitle = styled.div.attrs({
   font-family: 'AvenirHeavy';
   font-size: 200px;
   position: absolute;
-  color: #EEE;
+  color:#cfd7ff;
   top:12%;
   left:-70%;
   @media ${device.laptop} {
