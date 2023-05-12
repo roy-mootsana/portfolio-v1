@@ -21,7 +21,7 @@ class NameAndJobTitle extends Component {
         <NameReveal text="Roy" fontFam="Algerian" timeDelay={500} />
         <br />
         <TitleReveal text="UI Design and Development " fontFam="Bahnschrift SemiBold" timeDelay={1300} />
-        <TitleReveal text="⬇" fontFam="AvenirRoman" timeDelay={1300} />
+        <TitleReveal text="⬇" fontFam="Algerian" timeDelay={1300} />
    
       </Container>
     );

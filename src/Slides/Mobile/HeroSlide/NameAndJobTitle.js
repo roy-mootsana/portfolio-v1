@@ -14,7 +14,7 @@ const Container = styled.section`
 `;
 
 const Name = styled.div`
-  font-family: 'Bauhaus 93'!important;
+  font-family: 'Bauhaus93';
   text-align:center;
   padding-right: 10px;
   @media ${device.mobileS} {

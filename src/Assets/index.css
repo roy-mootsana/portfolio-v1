@@ -27,3 +27,17 @@ src: url('./Fonts/Avenir/Avenir-Heavy-05.ttf');
 font-family: 'Valencia';
 src: url('./Fonts/Valencia/Valencia.ttf');
 }
+
+
+
+@font-face {
+    font-family: 'Bauhaus93';
+    src: url('./Fonts/Avenir/Bauhaus93.ttf');
+    }
+@font-face {
+        font-family: 'Algerian';
+        src: url('./Fonts/Avenir/Algerian.ttf');
+        }
+    
+
+    

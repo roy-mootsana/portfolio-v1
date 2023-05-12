@@ -30,7 +30,7 @@ class Work extends Component {
       },
       {
         number: '01',
-        projectName: 'BluePrint Storybook',
+        projectName: 'BluePrint',
         projectDesc: 'Collaborated with a team to develop a comprehensive design system for a client. Created an extensive Storybook showcasing all the design elements and components.',
         projectType: 'DESIGN SYSTEM',
         roles: ['UI Designer', 'Technonogist'],
@@ -51,7 +51,7 @@ class Work extends Component {
       },
       {
         number: '04',
-        projectName: 'Nail boutique website',
+        projectName: 'Nail boutique',
         projectDesc: "Collaborated with a team to develop a website for a nail boutique with a customizer feature that allows customers to design their own nail art. The website also included information on the boutique's services, pricing, and booking options.",
         projectType: 'WEBSITE',
         roles: ['Web Developer'],
