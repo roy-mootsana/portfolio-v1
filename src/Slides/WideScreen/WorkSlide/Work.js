@@ -210,13 +210,13 @@ class Work extends Component {
     this.lastScrollTop = scrollDistance;
 
     if (
-      Math.floor(scrollDistance / vh) !== slideNumber &&
-      slideNumber < this.workDetails.length - 1
+      Math.floor(scrollDistance / vh) !== slideNumber
+      && slideNumber < this.workDetails.length - 1
     ) {
       this.setState({ slideNumber: Math.floor(scrollDistance / vh) });
     } else if (
-      slideNumber === this.workDetails.length - 1 &&
-      Math.floor(scrollDistance / vh) < slideNumber
+      slideNumber === this.workDetails.length - 1
+      && Math.floor(scrollDistance / vh) < slideNumber
     ) {
       this.setState({ slideNumber: Math.floor(scrollDistance / vh) });
     }
@@ -235,17 +235,18 @@ class Work extends Component {
       dialogProject: null,
     });
   };
+
   changeTextContentBasedOnScroll() {
     const { slideNumber } = this.state;
     const refresh = true;
-  
+
     if (slideNumber >= this.workDetails.length) {
       return null; // No project details to render
     }
-  
+
     const project = this.workDetails[slideNumber];
     const roles = project.roles.map((role, index) => <span key={index}>{role}</span>);
-  
+
     let description = null;
     if (project.projectDesc) {
       description = (
@@ -259,7 +260,7 @@ class Work extends Component {
         </div>
       );
     }
-  
+
     return (
       <TextContent
         number={project.number}
