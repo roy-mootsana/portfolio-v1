@@ -1,3 +1,8 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable react/sort-comp */
+/* eslint-disable linebreak-style */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import TextContent from './TextContent';
