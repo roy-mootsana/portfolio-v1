@@ -122,7 +122,7 @@ class Work extends Component {
         number: '03',
         projectName: 'Admin Portal',
         projectDesc:
-          'Developed an admin portal for a nail boutique with a database to capture stock and client information, as well as logic to generate reports, streamlining business operations and providing valuable insights into stock and client data.',
+          'Created an admin portal for a nail boutique, streamlining operations by managing stock, client data, and generating reports.',
         projectType: 'WEB APP',
         roles: ['MEAN Stack Developer', 'UI Designer'],
         problem:
@@ -134,9 +134,9 @@ class Work extends Component {
       },
       {
         number: '04',
-        projectName: 'Nail Boutique Website',
+        projectName: 'Nail Boutique',
         projectDesc:
-          "Collaborated with a team to develop a website for a nail boutique with a customizer feature that allows customers to design their own nail art. The website also included information on the boutique's services, pricing, and booking options.",
+          'Collaborated on a website for a nail boutique with a customizer feature enabling customers to design their own nail art. Included service details, pricing, and booking options.',
         projectType: 'WEBSITE',
         roles: ['Web Developer'],
         problem:
@@ -150,7 +150,7 @@ class Work extends Component {
         number: '05',
         projectName: 'Readpoint',
         projectDesc:
-          'Developed an e-commerce website for selling books with a MongoDB database and a payment system. The website allows customers to securely browse and purchase books.',
+          'Developed an e-commerce website for selling books with a MongoDB database and a payment system. The website allows customers to browse and purchase books.',
         projectType: 'WEB APP',
         roles: ['Full Stack Developer'],
         problem:
@@ -162,11 +162,11 @@ class Work extends Component {
       },
       {
         number: '06',
-        projectName: 'Portfolio Website',
+        projectName: 'Roy Mootsana',
         projectDesc:
           'Created a personal portfolio website to showcase my projects, skills, and experience as a web developer and designer.',
         projectType: 'WEBSITE',
-        roles: ['Web Developer', 'UI Designer'],
+        roles: ['UI Designer', 'Web Developer'],
         problem:
           'I wanted to create an online presence to showcase my skills, projects, and experience as a web developer and designer.',
         indicators:
