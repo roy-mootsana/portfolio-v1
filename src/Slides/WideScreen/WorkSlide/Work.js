@@ -38,6 +38,7 @@ const Overlay = styled.div`
 const Dialog = styled.div`   background-color: #ffffff;
 padding: 20px;
 border-radius: 10px;
+width: 80%;
 font-family: Arial, sans-serif;
 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 
@@ -99,10 +100,13 @@ class Work extends Component {
         roles: ['UI Designer', 'Technonogist'],
         problem:
           'The client needed a consistent and efficient design system to streamline their product development process.',
+
         indicators:
-          '1. Inconsistency in design across different products.\n2. Duplication of effort in designing similar components.\n3. Lack of a centralized repository for design assets.',
+          'Inconsistency in design across different products.\nDuplication of effort in designing similar components.\nLack of a centralized repository for design assets.',
         solution:
           'Developed a comprehensive design system called BluePrint that provided a library of reusable components, typography guidelines, color palettes, and UI patterns. Created a Storybook documentation to showcase and maintain the design system.',
+        QA:
+          'Storybook QA: Validated controls, tested responsiveness, and ensured visual alignment.\nComponent and Code Reviews: Conducted usability sessions, reviewed formatting and naming, and performed peer code reviews.\nChromatic QA: Utilized automated visual testing, collaborated for accelerated reviews, and integrated with continuous integration.\nNexus Testing: Ensured stable and up-to-date package versions through testing on Nexus.\nApplication Testing: Assessed component behavior within page templates.\nDevice Testing: Tested cross-platform compatibility, user experience, performance, and security.',  
       },
       {
         number: '02',
@@ -114,7 +118,7 @@ class Work extends Component {
         problem:
           'The client needed a set of applications that adhere to the design system we developed (BluePrint) to ensure a consistent user experience.',
         indicators:
-          '1. Inconsistency in the design language across different applications.\n2. Difficulty in maintaining consistent UI components and patterns.\n3. Lack of a seamless user experience across different apps.',
+          'Inconsistency in the design language across different applications.\nDifficulty in maintaining consistent UI components and patterns.\nLack of a seamless user experience across different apps.',
         solution:
           'Utilized the BluePrint design system to create a suite of Angular applications. Ensured consistent use of design elements, UI components, and interaction patterns across all apps. Conducted usability testing to validate the user experience.',
       },
@@ -128,7 +132,7 @@ class Work extends Component {
         problem:
           'The nail boutique needed an efficient system to manage their inventory, client information, and generate reports for business insights.',
         indicators:
-          '1. Manual inventory management causing errors and inefficiencies.\n2. Lack of a centralized system to store client information.\n3. Difficulty in generating accurate and timely reports.',
+          'Manual inventory management causing errors and inefficiencies.\nLack of a centralized system to store client information.\nDifficulty in generating accurate and timely reports.',
         solution:
           'Developed a web-based admin portal using the MEAN stack (MongoDB, Express.js, Angular, Node.js) that provided features for inventory management, client information storage, and report generation. Streamlined business operations and provided valuable insights for data-driven decision making.',
       },
@@ -142,7 +146,7 @@ class Work extends Component {
         problem:
           'The nail boutique needed an online presence to showcase their services and allow customers to customize and book nail art designs.',
         indicators:
-          '1. Limited online visibility and reach.\n2. Lack of a platform for customers to customize and book nail art designs.\n3. Inability to showcase services, pricing, and contact information effectively.',
+          'Limited online visibility and reach.\nLack of a platform for customers to customize and book nail art designs.\nInability to showcase services, pricing, and contact information effectively.',
         solution:
           'Developed a responsive website using HTML, CSS, and JavaScript that provided information about the nail boutique, showcased services, pricing, and contact details. Implemented a customizer feature to allow customers to design their own nail art and integrated a booking system for convenient appointment scheduling.',
       },
@@ -156,7 +160,7 @@ class Work extends Component {
         problem:
           'The client wanted to establish an online presence to sell books and provide a seamless user experience for browsing and purchasing books.',
         indicators:
-          '1. Inability to reach a wider customer base without an online platform.\n2. Lack of a convenient and secure way for customers to browse and purchase books.\n3. Manual book inventory management leading to inaccuracies and inefficiencies.',
+          'Inability to reach a wider customer base without an online platform.\nLack of a convenient and secure way for customers to browse and purchase books.\nManual book inventory management leading to inaccuracies and inefficiencies.',
         solution:
           'Developed a web application using the MERN stack (MongoDB, Express.js, React, Node.js) that provided features for browsing and purchasing books. Integrated a secure payment system and implemented an efficient book inventory management system with real-time updates.',
       },
@@ -170,7 +174,7 @@ class Work extends Component {
         problem:
           'I wanted to create an online presence to showcase my skills, projects, and experience as a web developer and designer.',
         indicators:
-          '1. Limited online visibility and reach.\n2. Difficulty in showcasing my work and skills effectively.\n3. Inability to provide a professional and engaging platform for potential employers or clients.',
+          'Limited online visibility and reach.\nDifficulty in showcasing my work and skills effectively.\nInability to provide a professional and engaging platform for potential employers or clients.',
         solution:
           'Designed and developed a personal portfolio website using modern web technologies such as React, styled-components, and responsive design principles. Showcased my projects, skills, and experience in an organized and visually appealing manner. Implemented interactive components and ensured seamless navigation.',
       },
@@ -186,6 +190,8 @@ class Work extends Component {
         indicators:
           '',
         solution:
+          '',
+        QA:
           '',
       },
 
@@ -294,10 +300,17 @@ class Work extends Component {
           </ul>
           <h3>Solution:</h3>
           <p>{dialogProject.solution}</p>
+          <h3>QA:</h3>
+          <ul>
+            {dialogProject.QA.split('\n').map((QA, index) => (
+              <li key={index}>{QA}</li>
+            ))}
+          </ul>
           <Button onClick={this.handleCloseDialog}>Close</Button>
         </Dialog>
       </Overlay>
     );
+
     return (
       <Container>
         {this.changeTextContentBasedOnScroll()}
@@ -308,9 +321,19 @@ class Work extends Component {
               <h3>Problem:</h3>
               <p>{dialogProject.problem}</p>
               <h3>Indicators:</h3>
-              <p>{dialogProject.indicators}</p>
+              <ul>
+                {dialogProject.indicators.split('\n').map((indicator, index) => (
+                  <li key={index}>{indicator}</li>
+                ))}
+              </ul>
               <h3>Solution:</h3>
               <p>{dialogProject.solution}</p>
+              <h3>QA:</h3>
+              <ul>
+                {dialogProject.QA.split('\n').map((QA, index) => (
+                  <li key={index}>{QA}</li>
+                ))}
+              </ul>
               <Button onClick={this.handleCloseDialog}>Close</Button>
             </Dialog>
           </Overlay>
