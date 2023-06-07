@@ -94,7 +94,7 @@ class Work extends Component {
         number: '01',
         projectName: 'BluePrint',
         projectDesc:
-          'Collaborated with a team to develop a comprehensive design system for a client. Created an extensive Storybook showcasing all the design elements and components.',
+          'Collaboratively built a comprehensive design system, showcased in Storybook.',
         projectType: 'DESIGN SYSTEM',
         roles: ['UI Designer', 'Technonogist'],
         problem:
