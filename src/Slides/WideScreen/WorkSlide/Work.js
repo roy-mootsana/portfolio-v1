@@ -97,7 +97,7 @@ class Work extends Component {
         projectDesc:
           'Collaboratively built a comprehensive design system, showcased in Storybook.',
         projectType: 'DESIGN SYSTEM',
-        roles: ['UI Designer', 'Technonogist'],
+        roles: ['UI Designer', 'Creative Technonogist'],
         problem:
           'The client needed a consistent and efficient design system to streamline their product development process.',
 

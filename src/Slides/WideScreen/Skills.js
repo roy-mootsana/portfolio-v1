@@ -6,6 +6,11 @@ const Container = styled.div`
   width: 100%;
   position: relative;
   overflow: hidden;
+ 
+  background-color: rgb(207 215 255);
+  box-shadow: 0 0 100px 50px rgb(207 215 255);
+  border-radius: 20px;
+  
 `;
 
 const SkillsTitle = styled.div`
