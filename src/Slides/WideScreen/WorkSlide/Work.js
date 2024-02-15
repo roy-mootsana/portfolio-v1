@@ -4,7 +4,7 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { StyleSheetManager } from 'styled-components';
 import TextContent from './TextContent';
 import ImageContent from './ImageContent';
 
@@ -121,7 +121,9 @@ class Work extends Component {
           'Inconsistency in the design language across different applications.\nDifficulty in maintaining consistent UI components and patterns.\nLack of a seamless user experience across different apps.',
         solution:
           'Utilized the BluePrint design system to create a suite of Angular applications. Ensured consistent use of design elements, UI components, and interaction patterns across all apps. Conducted usability testing to validate the user experience.',
-      },
+          QA:
+          'N/A'  
+       },
       {
         number: '03',
         projectName: 'Admin Portal',
@@ -135,7 +137,9 @@ class Work extends Component {
           'Manual inventory management causing errors and inefficiencies.\nLack of a centralized system to store client information.\nDifficulty in generating accurate and timely reports.',
         solution:
           'Developed a web-based admin portal using the MEAN stack (MongoDB, Express.js, Angular, Node.js) that provided features for inventory management, client information storage, and report generation. Streamlined business operations and provided valuable insights for data-driven decision making.',
-      },
+          QA:
+          'Storybook QA: Validated controls, tested responsiveness, and ensured visual alignment.\nComponent and Code Reviews: Conducted usability sessions, reviewed formatting and naming, and performed peer code reviews.\nChromatic QA: Utilized automated visual testing, collaborated for accelerated reviews, and integrated with continuous integration.\nNexus Testing: Ensured stable and up-to-date package versions through testing on Nexus.\nApplication Testing: Assessed component behavior within page templates.\nDevice Testing: Tested cross-platform compatibility, user experience, performance, and security.',  
+       },
       {
         number: '04',
         projectName: 'Nail Boutique',
@@ -149,7 +153,9 @@ class Work extends Component {
           'Limited online visibility and reach.\nLack of a platform for customers to customize and book nail art designs.\nInability to showcase services, pricing, and contact information effectively.',
         solution:
           'Developed a responsive website using HTML, CSS, and JavaScript that provided information about the nail boutique, showcased services, pricing, and contact details. Implemented a customizer feature to allow customers to design their own nail art and integrated a booking system for convenient appointment scheduling.',
-      },
+          QA:
+          'Storybook QA: Validated controls, tested responsiveness, and ensured visual alignment.\nComponent and Code Reviews: Conducted usability sessions, reviewed formatting and naming, and performed peer code reviews.\nChromatic QA: Utilized automated visual testing, collaborated for accelerated reviews, and integrated with continuous integration.\nNexus Testing: Ensured stable and up-to-date package versions through testing on Nexus.\nApplication Testing: Assessed component behavior within page templates.\nDevice Testing: Tested cross-platform compatibility, user experience, performance, and security.',  
+       },
       {
         number: '05',
         projectName: 'Readpoint',
@@ -163,7 +169,9 @@ class Work extends Component {
           'Inability to reach a wider customer base without an online platform.\nLack of a convenient and secure way for customers to browse and purchase books.\nManual book inventory management leading to inaccuracies and inefficiencies.',
         solution:
           'Developed a web application using the MERN stack (MongoDB, Express.js, React, Node.js) that provided features for browsing and purchasing books. Integrated a secure payment system and implemented an efficient book inventory management system with real-time updates.',
-      },
+          QA:
+          'Storybook QA: Validated controls, tested responsiveness, and ensured visual alignment.\nComponent and Code Reviews: Conducted usability sessions, reviewed formatting and naming, and performed peer code reviews.\nChromatic QA: Utilized automated visual testing, collaborated for accelerated reviews, and integrated with continuous integration.\nNexus Testing: Ensured stable and up-to-date package versions through testing on Nexus.\nApplication Testing: Assessed component behavior within page templates.\nDevice Testing: Tested cross-platform compatibility, user experience, performance, and security.',  
+       },
       {
         number: '06',
         projectName: 'Roy Mootsana',
@@ -177,7 +185,9 @@ class Work extends Component {
           'Limited online visibility and reach.\nDifficulty in showcasing my work and skills effectively.\nInability to provide a professional and engaging platform for potential employers or clients.',
         solution:
           'Designed and developed a personal portfolio website using modern web technologies such as React, styled-components, and responsive design principles. Showcased my projects, skills, and experience in an organized and visually appealing manner. Implemented interactive components and ensured seamless navigation.',
-      },
+          QA:
+          'Storybook QA: Validated controls, tested responsiveness, and ensured visual alignment.\nComponent and Code Reviews: Conducted usability sessions, reviewed formatting and naming, and performed peer code reviews.\nChromatic QA: Utilized automated visual testing, collaborated for accelerated reviews, and integrated with continuous integration.\nNexus Testing: Ensured stable and up-to-date package versions through testing on Nexus.\nApplication Testing: Assessed component behavior within page templates.\nDevice Testing: Tested cross-platform compatibility, user experience, performance, and security.',  
+        },
       {
         number: '',
         projectName: '',
@@ -295,21 +305,28 @@ class Work extends Component {
           <h3>Indicators:</h3>
           <ul>
             {dialogProject.indicators.split('\n').map((indicator, index) => (
-              <li key={index}>{indicator}</li>
+              <li key={index}>{indicator}</li>   
+              
             ))}
           </ul>
           <h3>Solution:</h3>
           <p>{dialogProject.solution}</p>
-          <h3>QA:</h3>
-          <ul>
-            {dialogProject.QA.split('\n').map((QA, index) => (
-              <li key={index}>{QA}</li>
-            ))}
-          </ul>
+          {/* Conditionally render the QA section */}
+          {dialogProject.projectName === 'BluePrint' && (
+            <>
+              <h3>QA:</h3>
+              <ul>
+                {dialogProject.QA.split('\n').map((QA, index) => (
+                  <li key={index}>{QA}</li>
+                ))}
+              </ul>
+            </>
+          )}
           <Button onClick={this.handleCloseDialog}>Close</Button>
         </Dialog>
       </Overlay>
     );
+    
 
     return (
       <Container>
@@ -328,12 +345,17 @@ class Work extends Component {
               </ul>
               <h3>Solution:</h3>
               <p>{dialogProject.solution}</p>
+          {/* Conditionally render the QA section */}
+          {dialogProject.projectName === 'BluePrint' && (
+            <>
               <h3>QA:</h3>
               <ul>
                 {dialogProject.QA.split('\n').map((QA, index) => (
                   <li key={index}>{QA}</li>
                 ))}
               </ul>
+            </>
+          )}
               <Button onClick={this.handleCloseDialog}>Close</Button>
             </Dialog>
           </Overlay>
